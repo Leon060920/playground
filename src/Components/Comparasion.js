@@ -47,7 +47,7 @@ const Comparasion = () => {
         Username:
         <input type="text" value={inputUsername} onChange={(e) => setInputUsername(e.target.value)} 
          onKeyPress={event => {
-          if (event.key == 'Enter') {
+          if (event.key === 'Enter') {
             handleCheck()
           }
         }}

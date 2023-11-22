@@ -21,7 +21,7 @@ function Home(){
             
             <div className="back">
             <h1>Bienvenido a la pagina de inicio</h1>
-            <img SRC="https://media.tenor.com/iLK-fRF4uEEAAAAd/batman-thumbs-up.gif"/>
+            <img src="https://media.tenor.com/iLK-fRF4uEEAAAAd/batman-thumbs-up.gif" alt="pam"/>
             <p>Bienvenido: {localStorage.getItem('name')}</p>
             <button onClick={logout} className="logout">Salir</button>
             <button onClick={deleteAccount} className="delete">Borrar</button>

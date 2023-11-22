@@ -34,7 +34,7 @@ export default function MiJSON() {
 
         ))
 
-        : <h1>Sorry info not found</h1>
+        : <h1>Espera un momento...</h1>
       }
     </div>
   )
