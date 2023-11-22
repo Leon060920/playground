@@ -37,9 +37,10 @@ function SignInSignupWithLocalStorage(){
       }
    }
 
+   
 
    const handleSignIn=()=>{
-    if(email.current.value===localEmail&&password.current.value===localPassword){
+    if (email.current.value==localEmail&&password.current.value==localPassword ){
         localStorage.setItem("signUp",email.current.value)
         window.location.reload()
     }else{
@@ -52,14 +53,21 @@ function SignInSignupWithLocalStorage(){
             {showHome?<Home/>:
             (show?
                 <div className="container">
-                        <h1>Hello {localName}</h1>
+                        <h1>Hola {localName}</h1>
                         <div className="input_space">
                             <input placeholder="Email" type='text' ref={email} />
                         </div>
                         <div className="input_space">
-                            <input placeholder="Password" type='password' ref={password} />
+                            <input placeholder="Password" type='password' ref={password}
+                           
+                            onKeyPress={event => {
+                                        if (event.key == 'Enter') {
+                                          handleSignIn()
+                                        }
+                                      }}
+                            />
                         </div>
-                        <button onClick={handleSignIn}>Sign In</button>
+                        <button onClick={handleSignIn}>Ingresar</button>
                 </div>
                 :
                 <div className="container">
@@ -70,9 +78,16 @@ function SignInSignupWithLocalStorage(){
                             <input placeholder="Email" type='text' ref={email} />
                         </div>
                         <div className="input_space">
-                            <input placeholder="Password" type='password' ref={password} />
+                            <input placeholder="Password" type='password' ref={password} 
+                            
+                            onKeyPress={event => {
+                                if (event.key == 'Enter') {
+                                    handleClick()
+                                }
+                              }}
+                            />
                         </div>
-                        <button onClick={handleClick}>Sign Up</button>
+                        <button onClick={handleClick}>Registrar</button>
                 </div>)
             }
         </div>

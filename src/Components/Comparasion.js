@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import './Comparasion.css';
+
+
 
 const Comparasion = () => {
+
   const [userData, setUserData] = useState(null);
   const [inputName, setInputName] = useState('');
   const [inputUsername, setInputUsername] = useState('');
@@ -17,6 +21,7 @@ const Comparasion = () => {
       }
     };
 
+    
     fetchData();
   }, []);
 
@@ -32,16 +37,24 @@ const Comparasion = () => {
 
   return (
     <div>
-      <h2>Thumb Checker</h2>
-      <label>
+      <h2>Comparador</h2>
+      
         Name:
         <input type="text" value={inputName} onChange={(e) => setInputName(e.target.value)} />
-      </label>
-      <label>
+        
+      
+      
         Username:
-        <input type="text" value={inputUsername} onChange={(e) => setInputUsername(e.target.value)} />
-      </label>
-      <button onClick={handleCheck}>Check</button>
+        <input type="text" value={inputUsername} onChange={(e) => setInputUsername(e.target.value)} 
+         onKeyPress={event => {
+          if (event.key == 'Enter') {
+            handleCheck()
+          }
+        }}
+        
+        />
+      
+      <button onClick={handleCheck}>Consultar</button>
       {thumbStatus && <div>Consulta: {thumbStatus}</div>}
     </div>
   );
