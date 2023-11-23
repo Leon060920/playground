@@ -4,7 +4,9 @@ function Carrusel() {
     
   return (
     <div>
-        <h1>Aqui iria un carrusel, pero de momento dejo esto.</h1>
+       
+       <h1 style={{fontWeight: 'bold', color: 'blue'}}>Hello you</h1>
+       
     </div>
   )
 }
