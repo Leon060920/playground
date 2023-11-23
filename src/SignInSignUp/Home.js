@@ -5,15 +5,9 @@ import Footer from "../Components/Footer";
 
 import './Home.css';
 
-function Home(){
-    const logout=()=>{
-        localStorage.removeItem("signUp")
-        window.location.reload()
-    }
-    const deleteAccount=()=>{ 
-        localStorage.clear()
-        window.location.reload()
-    }
+function Home() {
+    
+   
     
     return(
         <div className="back">
@@ -23,8 +17,7 @@ function Home(){
             <h1>Bienvenido a la pagina de inicio</h1>
             <img src="https://media.tenor.com/iLK-fRF4uEEAAAAd/batman-thumbs-up.gif" alt="pam"/>
             <p>Bienvenido: {localStorage.getItem('name')}</p>
-            <button onClick={logout} className="logout">Salir</button>
-            <button onClick={deleteAccount} className="delete">Borrar</button>
+            
             </div>
             <Footer/>
         </div>

@@ -31,7 +31,7 @@ const Comparasion = () => {
         (user) => user.name === inputName && user.username === inputUsername
       );
 
-      setThumbStatus(matchingUser ? '👍' : '👎');
+      setThumbStatus(matchingUser ? 'Usuario Correcto: 👍' : 'Usuario inconterrecto: 👎');
     }
   };
 
@@ -55,7 +55,7 @@ const Comparasion = () => {
         />
       
       <button onClick={handleCheck}>Consultar</button>
-      {thumbStatus && <div>Consulta: {thumbStatus}</div>}
+      {thumbStatus && <div> {thumbStatus}</div>}
     </div>
   );
 };

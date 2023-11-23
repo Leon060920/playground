@@ -40,7 +40,7 @@ function SignInSignupWithLocalStorage(){
    
 
    const handleSignIn=()=>{
-    if (email.current.value==localEmail&&password.current.value==localPassword ){
+    if (email.current.value===localEmail&&password.current.value===localPassword ){
         localStorage.setItem("signUp",email.current.value)
         window.location.reload()
     }else{
@@ -61,7 +61,7 @@ function SignInSignupWithLocalStorage(){
                             <input placeholder="Password" type='password' ref={password}
                            
                             onKeyPress={event => {
-                                        if (event.key == 'Enter') {
+                                        if (event.key === 'Enter') {
                                           handleSignIn()
                                         }
                                       }}
@@ -81,7 +81,7 @@ function SignInSignupWithLocalStorage(){
                             <input placeholder="Password" type='password' ref={password} 
                             
                             onKeyPress={event => {
-                                if (event.key == 'Enter') {
+                                if (event.key === 'Enter') {
                                     handleClick()
                                 }
                               }}
